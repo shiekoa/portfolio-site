@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全体設定 */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* フォント設定 */
+.noto-sans-jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-antique-soft-regular {
+  font-family: "Zen Antique Soft", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ヘッダー */
+.header-container {
+  display: flex;
+  justify-content: center; /*まず中央揃え */
+  align-items: center;
+  background: #FBFBFB;
+  padding: 0px 40px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* 1080pxの中央ボックス */
+.header-content {
+  display: flex;
+  justify-content: flex-end; /* 中で右寄せ */
+  align-items: center;
+  width: 1080px; /* 画面中央に固定 */
+  height: 100%;
+}
+/* ナビゲーションメニュー */
+.header-container nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-container nav ul li {
+  margin-right: 30px;
+}
+
+.header-container nav ul li a {
+  color: #302A2E;
+  text-decoration: none;
+  font-weight: normal;
+  letter-spacing: calc(16px * 0.3); /*  */
+}
+
+.header-container nav ul li a:hover {
+  color: #F6182D;
+}
+/* メインビジュアル */
+.hero {
+  background: url('mainred.webp') center/cover no-repeat #F6182D;
+  width: 100%;
+  height: 640px; /* 高さ */
+}
+
+
+/* 黒字の説明文 */
+.description {
+  max-width: 1080px; /* 最大幅1080px */
+  margin: 0 auto; /* 中央配置 */
+  text-align: left; /* 左揃え */
+  line-height: 1.8; /* 行間を広めに */
+  padding-top: 32px; /* トップ画像との間隔 */	padding-bottom: 0px; /* ボタンとの間隔も統一 */
+}
+
+/*  */
+.links-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px; /* 黒字との間隔を統一 */
+  margin-bottom: 32px; /* フッターとの間隔を統一 */
+}
+
+/* 1080px幅のコンテンツ用コンテナ */
+.content-container {
+  max-width: 1080px; /* 幅を1080pxに制限 */
+  margin: 0 auto; /* 中央配置 */
+  padding: 0 0px; /* スマホ対応の余白 */
+}
+/* 全ボタン共通のスタイル */
+.link-button {
+  display: flex;  /* フレックスボックス */
+  flex-direction: row;  /* 横並び */
+  justify-content: center;  /* 中央揃え */
+  align-items: center;  /* 縦中央揃え */
+  padding: 11px 32px;  /* 余白 */
+  gap: 16px;  /* アイコンと文字の間隔 */
+  background: #FBFBFB;  /* 背景色 */
+  border: 1px solid #F6182D;  /* 枠線の色 */
+  border-radius: 1000px;  /* 丸み */
+  color: #F6182D;  /* 文字色 */
+  font-size: 20px;  /* フォントサイズ */
+  text-decoration: none;  /* 下線なし */
+  transition: all 0.3s ease; /* なめらかアニメーション */
+  flex-grow: 0;  /* 大きさは固定 */
+}
+
+/* ホバー時のスタイル */
+.link-button:hover {
+  background: #F6182D;
+  color: #FBFBFB;
+}
+
+/* 全体のコンテナ */
+.links-container {
+  display: flex;
+  justify-content: center; /* 1080pxの中央配置 */
+  margin-top: 32px;
+}
+
+/* 1080pxのボックス */
+.links {
+  display: flex;
+  flex-wrap: wrap; /* 画面幅に合わせて改行 */
+  justify-content: flex-start; /* 左詰め */
+  gap: 8px; /* ボタン同士の余白 */
+  max-width: 1080px; /* 最大幅1080px */
+  width: 100%;
+}
+
+
+/* アイコンのスタイル */
+.icon {
+  width: 20px; /* アイコンのサイズを統一 */
+  height: auto;
+  image-rendering: -webkit-optimize-contrast; /* 画質を改善 */
+}
+.icon-small {
+  width: 18px; /* このアイコンだけ18pxにする */
+}
+.icon-large {
+  width: 25px; /* このアイコンだけ18pxにする */
+}
+/* 縦棒（セパレーター）のスタイル */
+.separator {
+  width: 1px; /* 太さ */
+  height: 16px; /* 縦の長さ */
+  background-color: #F6182D; /* 色 */
+  margin: 0 8px; /* アイコンや文字との間隔 */
+  flex-shrink: 0; /* これで縦棒が縮まないようにする */
+  box-sizing: content-box;
+}
+/* ホバー時のエフェクト */
+.link-button:hover {
+  background: #F6182D;
+  color: #FBFBFB;
+}
+
+.link-button:hover .icon,
+.link-button:hover .icon-small,
+.link-button:hover .icon-large {
+  filter: invert(1); /* アイコンを反転 */
+}
+
+/* フッターとボタンの間にpxのスペース */
+.links-container {
+  margin-bottom: 32px; /* ボタンとフッターの間隔をpxに */
+}
+/* フッター */
+footer {
+  background-color: #F6182D;
+  color: #FBFBFB;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+/* フッター内のテキストを左寄せにする */
+.footer-content {
+  max-width: 1080px; /* 1080px幅に制限 */
+  margin: 0 auto; /* 中央配置 */
+  text-align: left; /* 左寄せ */
+  padding: 0 0px; /* 左右の余白（スマホ対策） */
+}
+
+/* 全体の背景色を #FBFBFB に */
+body {
+  background-color: #FBFBFB;
+}
